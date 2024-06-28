@@ -1,0 +1,27 @@
+services:
+  sca-server:
+    container_name: "sca-server"
+    build:
+      context: .
+      dockerfile: local.Dockerfile
+    restart: unless-stopped
+    ports:
+      - "12499:12499"
+  sca-database:
+    container_name: "sca-database"
+    image: postgres:alpine
+    restart: always
+    environment:
+      - POSTGRES_HOST=sca-database
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=sca
+      - POSTGRES_MODE=disable
+    ports:
+      - "5432:5432"
+    volumes:
+      - sca-data:/var/lib/postgresql/data
+
+volumes:
+  sca-data:

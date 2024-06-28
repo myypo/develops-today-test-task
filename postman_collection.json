@@ -1,0 +1,376 @@
+{
+	"info": {
+		"_postman_id": "1e1c28e6-c7d1-48f4-838e-44b434550bc1",
+		"name": "Develops Today SCA test task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21723791"
+	},
+	"item": [
+		{
+			"name": "Cats",
+			"item": [
+				{
+					"name": "List Cats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_PATH}}/cats",
+							"host": [
+								"{{BASE_PATH}}"
+							],
+							"path": [
+								"cats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_PATH}}/cats/:id",
+							"host": [
+								"{{BASE_PATH}}"
+							],
+							"path": [
+								"cats",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "0093dc52-fcef-4b84-bfef-877a0e597765"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Cat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"catname\",\n    \"years_of_experience\": 5,\n    \"breed\": \"Turkish Van\",\n    \"salary_in_cents\": 915021315\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_PATH}}/cats",
+							"host": [
+								"{{BASE_PATH}}"
+							],
+							"path": [
+								"cats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cat",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"salary_in_cents\": 15150151015\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_PATH}}/cats/:id",
+							"host": [
+								"{{BASE_PATH}}"
+							],
+							"path": [
+								"cats",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2bcfb953-3349-4430-b771-0f2ba35db89f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cat",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_PATH}}/cats/:id",
+							"host": [
+								"{{BASE_PATH}}"
+							],
+							"path": [
+								"cats",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63e151f7-7ad8-4a38-870d-503d72b26d78"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Missions",
+			"item": [
+				{
+					"name": "Get Mission",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_PATH}}/missions/:id",
+							"host": [
+								"{{BASE_PATH}}"
+							],
+							"path": [
+								"missions",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "e4188519-1e13-4011-b71d-528a6013de0f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Missions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_PATH}}/missions",
+							"host": [
+								"{{BASE_PATH}}"
+							],
+							"path": [
+								"missions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Mission",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"targets\": [\n        {\n            \"name\": \"one\",\n            \"country\": \"A\",\n            \"notes\": \"notes A\"\n        },\n        {\n            \"name\": \"two\",\n            \"country\": \"B\",\n            \"notes\": \"notes B\"\n        },\n                {\n            \"name\": \"three\",\n            \"country\": \"C\",\n            \"notes\": \"notes C\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_PATH}}/missions",
+							"host": [
+								"{{BASE_PATH}}"
+							],
+							"path": [
+								"missions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update mission",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_PATH}}/missions/:id",
+							"host": [
+								"{{BASE_PATH}}"
+							],
+							"path": [
+								"missions",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Mission",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_PATH}}/missions/:id",
+							"host": [
+								"{{BASE_PATH}}"
+							],
+							"path": [
+								"missions",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Targets",
+			"item": [
+				{
+					"name": "Create a new Target for Mission",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mission_id\": \"f15fded1-d5f9-4f58-a064-83f86f867c3d\",\n    \"name\": \"atarget\",\n    \"country\": \"idk\",\n    \"notes\": \"some notes\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_PATH}}/targets",
+							"host": [
+								"{{BASE_PATH}}"
+							],
+							"path": [
+								"targets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update target",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"new name\",\n    \"country\": \"upd country\",\n    \"notes\": \"new notes\",\n    \"status\": \"COMPLETED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_PATH}}/targets/:id",
+							"host": [
+								"{{BASE_PATH}}"
+							],
+							"path": [
+								"targets",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "7f738746-cd1e-4ba0-a172-c6325cc26938"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Target",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_PATH}}/targets/:id",
+							"host": [
+								"{{BASE_PATH}}"
+							],
+							"path": [
+								"targets",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "7f738746-cd1e-4ba0-a172-c6325cc26938"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_PATH",
+			"value": "localhost:12499",
+			"type": "string"
+		}
+	]
+}
